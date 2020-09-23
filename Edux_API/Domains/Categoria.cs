@@ -8,6 +8,7 @@ namespace Edux_API.Domains
         public Categoria()
         {
             Objetivo = new HashSet<Objetivo>();
+            IdCategoria = Guid.NewGuid();
         }
 
         public Guid IdCategoria { get; set; }

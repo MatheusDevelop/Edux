@@ -10,6 +10,7 @@ namespace Edux_API.Domains
             AlunoTurma = new HashSet<AlunoTurma>();
             Dica = new HashSet<Dica>();
             ProfessorTurma = new HashSet<ProfessorTurma>();
+            IdUsuario = Guid.NewGuid();
         }
 
         public Guid IdUsuario { get; set; }

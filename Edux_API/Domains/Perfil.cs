@@ -8,6 +8,7 @@ namespace Edux_API.Domains
         public Perfil()
         {
             Usuario = new HashSet<Usuario>();
+            IdPerfil = Guid.NewGuid();
         }
 
         public Guid IdPerfil { get; set; }

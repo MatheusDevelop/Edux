@@ -8,6 +8,7 @@ namespace Edux_API.Domains
         public Curso()
         {
             Turma = new HashSet<Turma>();
+            IdCurso = Guid.NewGuid();
         }
 
         public Guid IdCurso { get; set; }

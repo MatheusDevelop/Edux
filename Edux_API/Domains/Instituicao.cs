@@ -8,6 +8,7 @@ namespace Edux_API.Domains
         public Instituicao()
         {
             Curso = new HashSet<Curso>();
+            IdInstituicao = Guid.NewGuid();
         }
 
         public Guid IdInstituicao { get; set; }
@@ -19,6 +20,8 @@ namespace Edux_API.Domains
         public string Cidade { get; set; }
         public string Cep { get; set; }
         public string Uf { get; set; }
+
+        
 
         public virtual ICollection<Curso> Curso { get; set; }
     }

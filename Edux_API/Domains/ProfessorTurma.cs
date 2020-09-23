@@ -9,6 +9,10 @@ namespace Edux_API.Domains
         public string Descricao { get; set; }
         public Guid? IdUsuario { get; set; }
         public Guid? IdTurma { get; set; }
+        public ProfessorTurma()
+        {
+            IdProfessorTurma = Guid.NewGuid();
+        }
 
         public virtual Turma IdTurmaNavigation { get; set; }
         public virtual Usuario IdUsuarioNavigation { get; set; }

@@ -10,6 +10,10 @@ namespace Edux_API.Domains
         public DateTime DataAlcancado { get; set; }
         public Guid? IdAlunoTurma { get; set; }
         public Guid? IdObjetivo { get; set; }
+        public ObjetivoAluno()
+        {
+            IdObjetivoAluno = Guid.NewGuid();
+        }
 
         public virtual AlunoTurma IdAlunoTurmaNavigation { get; set; }
         public virtual Objetivo IdObjetivoNavigation { get; set; }
