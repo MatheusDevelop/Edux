@@ -9,5 +9,8 @@ namespace Edux_API.Interfaces
     {
         T BuscarPorId(Guid id);
         List<T> BuscarTodos();
+        void Criar(T Objeto);
+        void Atualizar(T Objeto);
+        void Deletar(Guid id);
     }
 }
