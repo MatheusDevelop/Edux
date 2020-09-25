@@ -7,13 +7,13 @@ using System.Threading.Tasks;
 
 namespace Edux_API.Utils
 {
-    public class Auth
+    public class Auth 
     {
         eduxContext contexto = new eduxContext();
         public bool AutenticarUsuario(Usuario usuario)
         {
+            usuario.Senha = Crypto.GerarHash(usuario.Senha, usuario.Email);
 
-            //
             var user = contexto.Usuario.FirstOrDefault(e => e.Email == usuario.Email && e.Senha == usuario.Senha);
 
             if (user != null)
@@ -21,12 +21,6 @@ namespace Edux_API.Utils
                 return true;
             }
             return false;
-        }
-
-        //gerar salt + hash
-        public string GerarHash(string senha)
-        {
-            return "";
         }
     }
 }
