@@ -7,11 +7,13 @@ using System.Threading.Tasks;
 
 namespace Edux_API.Utils
 {
-    public class Crypto
+    public static class Crypto
     {
         //gerar salt + hash
-        public string GerarHash(string Senha, string Salt)
+        public static string GerarHash(string Senha, string Salt)
         {
+            Salt = Salt.Substring(0, 5);
+
             using (SHA256 sha256hash = SHA256.Create())
             {
                 //ComputeHash - Retorna um array de bytes
