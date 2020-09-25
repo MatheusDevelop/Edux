@@ -12,9 +12,9 @@ namespace Edux_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+   
     public class CursoController : GenericController<Curso>
-    {
-
-        
+    {        
     }
+
 }

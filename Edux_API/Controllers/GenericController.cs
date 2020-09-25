@@ -16,35 +16,33 @@ namespace Edux_API.Controllers
 
         BaseGeneric<T> repo = new BaseGeneric<T>();
 
-        // GET: api/<GenericController>
-        [HttpGet]
-        public string Get()
+
+        
+        
+        [HttpGet]        
+        public List<T> Get()
         {
-            return "Ta funcionando buceta";
+            return repo.BuscarTodos();
         }
 
-        // GET api/<GenericController>/5
         [HttpGet("{id}")]
         public T Get(Guid id)
         {
             return repo.BuscarPorId(id);
         }
 
-        // POST api/<GenericController>
         [HttpPost]
         public void Post([FromBody] T obj)
         {
             repo.Criar(obj);
         }
 
-        // PUT api/<GenericController>/5
         [HttpPut("{id}")]
         public void Put([FromBody] T obj)
         {
             repo.Atualizar(obj);
         }
 
-        // DELETE api/<GenericController>/5
         [HttpDelete("{id}")]
         public void Delete(Guid id)
         {

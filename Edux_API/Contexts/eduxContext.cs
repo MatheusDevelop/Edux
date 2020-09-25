@@ -2,15 +2,22 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Edux_API.Domains;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace Edux_API.Contexts
 {
     public partial class eduxContext : DbContext
     {
+        private IConfiguration configuration;
+
         public eduxContext()
         {
         }
-
+        public eduxContext(IConfiguration config)
+        {
+            configuration = config;
+        }
         public eduxContext(DbContextOptions<eduxContext> options)
             : base(options)
         {
@@ -33,8 +40,7 @@ namespace Edux_API.Contexts
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. See http://go.microsoft.com/fwlink/?LinkId=723263 for guidance on storing connection strings.
-                optionsBuilder.UseSqlServer("Data Source=.\\SqlExpress; Initial Catalog= Edux; User Id=sa; Password=sa132");
+               optionsBuilder.UseSqlServer("Data Source=.\\SqlExpress; Initial Catalog= Edux; User Id=sa; Password=sa132");
             }
         }
 
