@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\willi\\Documents\\Matheus\\SENAI\\Eduxapp\\Edux_API\\Edux_API\\Edux_API.csproj": {}
+    "C:\\Users\\vinicius\\Documents\\Senai 2020\\2°Termo\\2°Sprint\\Edux\\Edux_API\\Edux_API.csproj": {}
   },
   "projects": {
-    "C:\\Users\\willi\\Documents\\Matheus\\SENAI\\Eduxapp\\Edux_API\\Edux_API\\Edux_API.csproj": {
+    "C:\\Users\\vinicius\\Documents\\Senai 2020\\2°Termo\\2°Sprint\\Edux\\Edux_API\\Edux_API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\willi\\Documents\\Matheus\\SENAI\\Eduxapp\\Edux_API\\Edux_API\\Edux_API.csproj",
+        "projectUniqueName": "C:\\Users\\vinicius\\Documents\\Senai 2020\\2°Termo\\2°Sprint\\Edux\\Edux_API\\Edux_API.csproj",
         "projectName": "Edux_API",
-        "projectPath": "C:\\Users\\willi\\Documents\\Matheus\\SENAI\\Eduxapp\\Edux_API\\Edux_API\\Edux_API.csproj",
-        "packagesPath": "C:\\Users\\willi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\willi\\Documents\\Matheus\\SENAI\\Eduxapp\\Edux_API\\Edux_API\\obj\\",
+        "projectPath": "C:\\Users\\vinicius\\Documents\\Senai 2020\\2°Termo\\2°Sprint\\Edux\\Edux_API\\Edux_API.csproj",
+        "packagesPath": "C:\\Users\\vinicius\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\vinicius\\Documents\\Senai 2020\\2°Termo\\2°Sprint\\Edux\\Edux_API\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\willi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\vinicius\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
