@@ -23,10 +23,5 @@ namespace Edux_API.Utils
             return false;
         }
 
-        //gerar salt + hash
-        public string GerarHash(string senha)
-        {
-            return "";
-        }
     }
 }
