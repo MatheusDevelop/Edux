@@ -17,14 +17,14 @@ namespace Edux_API.Utils
         /// </summary>
         /// <param name="user">Objeto usuário</param>
         /// <returns>Se o usuario existe ou não</returns>
-        public bool VerificarBanco(Usuario user)
+        public bool userExists(Usuario user)
         {
             var usuario = contexto.Usuario.FirstOrDefault(c => c.Nome == user.Nome && c.Email == user.Email);
             if(usuario == null)
             {
-                return true;
+                return false;
             }
-            return false;
+            return true;
         }
 
         /// <summary>
@@ -36,12 +36,12 @@ namespace Edux_API.Utils
         {
             user.Senha = Crypto.GerarHash(user.Senha, user.Email);
 
-            if (VerificarBanco(user))
+            if (userExists(user))
             {
                 return false;
             }
-
             contexto.Usuario.Add(user);
+            contexto.SaveChanges();
 
             return true;
         }

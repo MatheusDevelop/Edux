@@ -18,6 +18,7 @@ namespace Edux_API.Controllers
     {
         eduxContext contexto = new eduxContext();
 
+   
         Cadastro cadastro = new Cadastro();
 
 

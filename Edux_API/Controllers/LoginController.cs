@@ -39,10 +39,11 @@ namespace Edux_API.Controllers
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
             var claims = new[] {
-                new Claim(JwtRegisteredClaimNames.NameId, userInfo.Nome),
                 new Claim(JwtRegisteredClaimNames.Email, userInfo.Email),
+                new Claim(JwtRegisteredClaimNames.Email, userInfo.Nome),
+                //TODO: IdPerfilNavigation vindo como nulo e dando erro
+               // new Claim(ClaimTypes.Role, userInfo.IdPerfilNavigation.Permissao),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
-                new Claim(ClaimTypes.Role, userInfo.IdPerfilNavigation.Permissao)
             };
 
             var token = new JwtSecurityToken
@@ -62,10 +63,10 @@ namespace Edux_API.Controllers
         
         public IActionResult Login([FromBody] Usuario usuario)
         {
-            if(auth.AutenticarUsuario(usuario))
-            {
-                return Ok(new {token=GerarJwt(usuario)});
-                
+            var user = auth.AutenticarUsuario(usuario);
+            if (user != null)
+            {                
+                return Ok(new {token=GerarJwt(user)});                
             }
 
             return Unauthorized();
