@@ -10,7 +10,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace Edux_API.Controllers
 {
     [Route("api/[controller]")]
-    [ApiController]    
+    [ApiController]
+    [Authorize(Roles = "Instituicao,Professor,Admin")]
     public class CategoriaController : GenericController<Categoria>
     {
     }

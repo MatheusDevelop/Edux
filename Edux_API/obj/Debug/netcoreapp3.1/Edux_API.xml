@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Edux_API</name>
+    </assembly>
+    <members>
+        <member name="M:Edux_API.Controllers.DicaController.Get">
+            <summary>
+            Retorna uma lista mostrando todos os objetos da requisiçao
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Edux_API.Controllers.DicaController.Get(System.Guid)">
+            <summary>
+            Retorna um unico objeto com o id especificado
+            </summary>
+            <param name="id">Id do objeto que voce quer procurar</param>
+            <returns></returns>
+        </member>
+        <member name="M:Edux_API.Controllers.DicaController.Post(Edux_API.Domains.Dica)">
+            <summary>
+            Adiciona o objeto do body da requisiçao ao banco
+            </summary>
+            <param name="dica">Objeto</param>
+        </member>
+        <member name="M:Edux_API.Controllers.DicaController.Put(Edux_API.Domains.Dica)">
+            <summary>
+            Atualiza o objeto da requisiçao no banco de dados
+            </summary>
+            <param name="dica">Objeto</param>
+        </member>
+        <member name="M:Edux_API.Controllers.DicaController.Delete(System.Guid)">
+            <summary>
+            Delete o objeto pelo id especificado
+            </summary>
+            <param name="id">Id do objeto</param>
+        </member>
+        <member name="M:Edux_API.Controllers.GenericController`1.Get">
+            <summary>
+            Retorna uma lista mostrando todos os objetos da requisiçao
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Edux_API.Controllers.GenericController`1.Get(System.Guid)">
+            <summary>
+            Retorna um unico objeto com o id especificado
+            </summary>
+            <param name="id">Id do objeto que voce quer procurar</param>
+            <returns></returns>
+        </member>
+        <member name="M:Edux_API.Controllers.GenericController`1.Post(`0)">
+            <summary>
+            Adiciona o objeto do body da requisiçao ao banco
+            </summary>
+            <param name="obj">Objeto</param>
+        </member>
+        <member name="M:Edux_API.Controllers.GenericController`1.Put(`0)">
+            <summary>
+            Atualiza o objeto da requisiçao no banco de dados
+            </summary>
+            <param name="obj">Objeto</param>
+        </member>
+        <member name="M:Edux_API.Controllers.GenericController`1.Delete(System.Guid)">
+            <summary>
+            Delete o objeto pelo id especificado
+            </summary>
+            <param name="id">Id do objeto</param>
+        </member>
+        <member name="M:Edux_API.Utils.Cadastro.userExists(Edux_API.Domains.Usuario)">
+            <summary>
+            Verfica se o usuário existe no banco
+            </summary>
+            <param name="user">Objeto usuário</param>
+            <returns>Se o usuario existe ou não</returns>
+        </member>
+        <member name="M:Edux_API.Utils.Cadastro.CadastrarUsuario(Edux_API.Domains.Usuario)">
+            <summary>
+            Cadastra um usuário
+            </summary>
+            <param name="user">Objeto usuário</param>
+            <returns>Usuário cadastrado</returns>
+        </member>
+    </members>
+</doc>

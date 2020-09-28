@@ -12,6 +12,7 @@ namespace Edux_API.Repositories
         eduxContext _edux = new eduxContext();
         public void Atualizar(T objeto)
         {
+
             _edux.Set<T>().Update(objeto);
             _edux.SaveChanges();
         }

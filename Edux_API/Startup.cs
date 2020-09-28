@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -13,6 +15,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 
 namespace Edux_API
 {
@@ -29,6 +32,7 @@ namespace Edux_API
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
 
 
             // JWT
@@ -48,6 +52,21 @@ namespace Edux_API
             });
 
 
+            
+           //Swagger
+            services.AddSwaggerGen(c=>
+                {
+                    c.SwaggerDoc("v1", new OpenApiInfo { Title = "Edux API", Version = "v1" });
+
+
+                    // Mostrar o caminho dos comentários dos métodos Swagger JSON and UI.
+                    var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
+                    var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
+                    c.IncludeXmlComments(xmlPath);
+                }
+            );
+
+
 
 
         }
@@ -60,7 +79,14 @@ namespace Edux_API
                 app.UseDeveloperExceptionPage();
             }
 
+
             app.UseHttpsRedirection();
+
+
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+            });
 
             app.UseRouting();
 
@@ -68,6 +94,7 @@ namespace Edux_API
 
             app.UseAuthorization();
 
+            app.UseSwagger();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();

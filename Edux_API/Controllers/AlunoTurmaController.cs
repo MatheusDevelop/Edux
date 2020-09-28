@@ -3,11 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Edux_API.Domains;
-using Edux_API.Repositories;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-
-// For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
 namespace Edux_API.Controllers
 {
@@ -15,8 +13,7 @@ namespace Edux_API.Controllers
     [ApiController]
 
     [Authorize(Roles = "Instituicao,Admin")]
-    public class CursoController : GenericController<Curso>
-    {        
+    public class AlunoTurmaController :GenericController<AlunoTurma>
+    {
     }
-
 }

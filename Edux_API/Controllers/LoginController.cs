@@ -40,9 +40,8 @@ namespace Edux_API.Controllers
 
             var claims = new[] {
                 new Claim(JwtRegisteredClaimNames.Email, userInfo.Email),
-                new Claim(JwtRegisteredClaimNames.Email, userInfo.Nome),
-                //TODO: IdPerfilNavigation vindo como nulo e dando erro
-               // new Claim(ClaimTypes.Role, userInfo.IdPerfilNavigation.Permissao),
+                new Claim(JwtRegisteredClaimNames.NameId, userInfo.Nome),
+                new Claim(ClaimTypes.Role, userInfo.IdPerfilNavigation.Permissao),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
             };
 

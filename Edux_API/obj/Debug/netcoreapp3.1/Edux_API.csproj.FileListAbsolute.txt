@@ -140,8 +140,6 @@ C:\Users\willi\Documents\Matheus\SENAI\Eduxapp\Edux_API\Edux_API\bin\Debug\netco
 C:\Users\willi\Documents\Matheus\SENAI\Eduxapp\Edux_API\Edux_API\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\e_sqlite3.dll
 C:\Users\willi\Documents\Matheus\SENAI\Eduxapp\Edux_API\Edux_API\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\e_sqlite3.dll
 C:\Users\willi\Documents\Matheus\SENAI\Eduxapp\Edux_API\Edux_API\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\e_sqlite3.dll
-C:\Users\willi\Documents\Matheus\SENAI\Eduxapp\Edux_API\Edux_API\obj\Debug\netcoreapp3.1\Edux_API.csproj.CoreCompileInputs.cache
-C:\Users\willi\Documents\Matheus\SENAI\Eduxapp\Edux_API\Edux_API\obj\Debug\netcoreapp3.1\Edux_API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\willi\Documents\Matheus\SENAI\Eduxapp\Edux_API\Edux_API\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Razor.Language.dll
 C:\Users\willi\Documents\Matheus\SENAI\Eduxapp\Edux_API\Edux_API\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.dll
 C:\Users\willi\Documents\Matheus\SENAI\Eduxapp\Edux_API\Edux_API\bin\Debug\netcoreapp3.1\Microsoft.CodeAnalysis.CSharp.dll
@@ -370,3 +368,12 @@ C:\Users\vinicius\Documents\Senai 2020\2°Termo\2°Sprint\Edux\Edux_API\obj\Debu
 C:\Users\vinicius\Documents\Senai 2020\2°Termo\2°Sprint\Edux\Edux_API\obj\Debug\netcoreapp3.1\Edux_API.pdb
 C:\Users\vinicius\Documents\Senai 2020\2°Termo\2°Sprint\Edux\Edux_API\obj\Debug\netcoreapp3.1\Edux_API.genruntimeconfig.cache
 C:\Users\vinicius\Documents\Senai 2020\2°Termo\2°Sprint\Edux\Edux_API\obj\Debug\netcoreapp3.1\Edux_API.csprojAssemblyReference.cache
+C:\Users\willi\Documents\Matheus\SENAI\Eduxapp\Edux_API\Edux_API\bin\Debug\netcoreapp3.1\Edux_API.xml
+C:\Users\willi\Documents\Matheus\SENAI\Eduxapp\Edux_API\Edux_API\bin\Debug\netcoreapp3.1\Microsoft.OpenApi.dll
+C:\Users\willi\Documents\Matheus\SENAI\Eduxapp\Edux_API\Edux_API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\willi\Documents\Matheus\SENAI\Eduxapp\Edux_API\Edux_API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\willi\Documents\Matheus\SENAI\Eduxapp\Edux_API\Edux_API\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\willi\Documents\Matheus\SENAI\Eduxapp\Edux_API\Edux_API\obj\Debug\netcoreapp3.1\Edux_API.csproj.CoreCompileInputs.cache
+C:\Users\willi\Documents\Matheus\SENAI\Eduxapp\Edux_API\Edux_API\obj\Debug\netcoreapp3.1\Edux_API.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\willi\Documents\Matheus\SENAI\Eduxapp\Edux_API\Edux_API\obj\Debug\netcoreapp3.1\Edux_API.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\willi\Documents\Matheus\SENAI\Eduxapp\Edux_API\Edux_API\obj\Debug\netcoreapp3.1\Edux_API.xml

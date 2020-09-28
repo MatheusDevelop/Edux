@@ -1,5 +1,6 @@
 ﻿using Edux_API.Contexts;
 using Edux_API.Domains;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace Edux_API.Utils
         {
             usuario.Senha = Crypto.GerarHash(usuario.Senha, usuario.Email);
 
-            var user = contexto.Usuario.FirstOrDefault(e => e.Email == usuario.Email && e.Senha == usuario.Senha);
+            var user = contexto.Usuario.Include(e=> e.IdPerfilNavigation).FirstOrDefault(e => e.Email == usuario.Email && e.Senha == usuario.Senha);
 
             return user;
         }
