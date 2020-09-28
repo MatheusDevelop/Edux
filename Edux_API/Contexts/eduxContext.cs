@@ -40,7 +40,7 @@ namespace Edux_API.Contexts
         {
             if (!optionsBuilder.IsConfigured)
             {
-               optionsBuilder.UseSqlServer("Data Source=.\\SqlExpress; Initial Catalog= Edux; User Id=sa; Password=sa132");
+               optionsBuilder.UseSqlServer("Data Source= DESKTOP-RAOH29V; Initial Catalog= Edux; Trusted_Connection=True");
             }
         }
 
