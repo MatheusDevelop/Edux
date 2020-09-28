@@ -4,11 +4,12 @@
 <p>Grupo DevX-SENAI Informatica</p>
 <ul>
 
-<li>Matheus Barbosa - PO e programador.</li>
+<li>Matheus Barbosa - PO, programador e DevOps.</li>
 <li>Vinícius Miranda - Scrum Master e programador.</li>
 <li>Beatriz Claus - Programadora.</li>
 <li>Diego Silva - Programador.</li>
 <li>Henrique Oliveira - Programador.</li>
+
 
 </ul>
 
