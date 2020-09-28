@@ -9,6 +9,8 @@ using Microsoft.AspNetCore.Mvc;
 namespace Edux_API.Controllers
 {
     [Route("api/[controller]")]
+
+
     [ApiController]
     public class TurmaController : GenericController<Turma>
     {
