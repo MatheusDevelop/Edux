@@ -14,14 +14,8 @@ namespace Edux_API.Controllers
     [ApiController]
     public class GenericController<T> : ControllerBase where T: class
     {
-       
-        private readonly IBase<T> repo;
 
-
-        public GenericController(IBase<T> _repo)
-        {
-            repo = _repo;
-        }
+        BaseGeneric<T> repo = new BaseGeneric<T>();
         
         /// <summary>
         /// Retorna uma lista mostrando todos os objetos da requisiçao
