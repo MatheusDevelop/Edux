@@ -9,31 +9,31 @@ namespace Edux_API.Repositories
 {
     public class BaseGeneric<T> : IBase<T> where T : class
     {
-        eduxContext _edux = new eduxContext();
-        public void Atualizar(T objeto)
+        public eduxContext _edux = new eduxContext();
+        public virtual void Atualizar(T objeto)
         {
 
             _edux.Set<T>().Update(objeto);
             _edux.SaveChanges();
         }
 
-        public T BuscarPorId(Guid id)
-        {
+        public virtual T BuscarPorId(Guid id)
+        {      
             return _edux.Set<T>().Find(id);
-        }
-
-        public List<T> BuscarTodos()
+        }      
+               
+        public virtual List<T> BuscarTodos()
         {
             return _edux.Set<T>().ToList();
         }
 
-        public void Criar(T Objeto)
+        public virtual void Criar(T Objeto)
         {
             _edux.Set<T>().Add(Objeto);
             _edux.SaveChanges();
         }
 
-        public void Deletar(Guid id)
+        public virtual void Deletar(Guid id)
         {
             T objeto = BuscarPorId(id);
             _edux.Set<T>().Remove(objeto);

@@ -1,6 +1,7 @@
 ﻿using Edux_API.Contexts;
 using Edux_API.Domains;
-using Edux_API.Interfaces.Services;
+using Edux_API.Interfaces;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,61 +10,62 @@ using System.Threading.Tasks;
 
 namespace Edux_API.Repositories.Services
 {
-    public class DicaRepository : IDica
+    public class DicaRepository : BaseGeneric<Dica>
     {
-        eduxContext _edux = new eduxContext();
 
-        public void AdicionarDica(Dica dica)
+        public override void Criar(Dica Objeto)
         {
-            var image = dica.ImageForUpload;
+            var imageFile = Objeto.ImageForUpload;
 
-            using var ms = new MemoryStream();
-                image.CopyTo(ms);
-                var imgBytes = ms.ToArray();
+            Objeto.Imagem = convertFileToStringForDatabase(imageFile);
 
-
-            dica.Imagem = Convert.ToBase64String(imgBytes);
-
-            _edux.Dica.Add(dica);
-            _edux.SaveChanges();
+            _edux.Dica.Add(Objeto);
 
 
 
 
         }
 
-        public void AtualizarDica(Dica dica)
+
+
+        private string convertFileToStringForDatabase(IFormFile image)
         {
-            if(dica.ImageForUpload != null)
+            byte[] arrayOfBytes = convertFileToArrayOfBytes(image);
+            string imageConvertedForString = convertArrayOfBytesToString(arrayOfBytes);
+
+            return imageConvertedForString;
+
+
+        }
+
+        private byte[] convertFileToArrayOfBytes(IFormFile file)
+        {
+            byte[] arr = null;
+
+            using (var ms = new MemoryStream())
             {
-                var image = dica.ImageForUpload;
-
-                using var ms = new MemoryStream();
-                    image.CopyTo(ms);
-                    var imgBytes = ms.ToArray();
-
-                dica.Imagem = Convert.ToBase64String(imgBytes);
+                file.CopyTo(ms);
+                arr = ms.ToArray();
+                
             }
 
-            _edux.Dica.Update(dica);
-            _edux.SaveChanges();
+
+            return arr;
+
         }
 
-        public List<Dica> LerDica()
+        private string convertArrayOfBytesToString(byte[] array)
         {
-            return _edux.Dica.ToList();
+            string str = Convert.ToBase64String(array);
+            return str;
         }
 
-        public void RemoverDica(Guid id)
-        {
-            var obj = SearchDicaForId(id);
-            _edux.Dica.Remove(obj);
-            _edux.SaveChanges();
-        }
 
-        public Dica SearchDicaForId(Guid id)
-        {
-            return _edux.Dica.FirstOrDefault(e => e.IdDica == id);
-        }
+
+
+
+
+
+
     }
 }
