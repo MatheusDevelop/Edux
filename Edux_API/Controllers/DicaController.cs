@@ -25,7 +25,7 @@ namespace Edux_API.Controllers
         [HttpGet]
         public List<Dica> Get()
         {
-            return repo.LerDica();
+            return repo.BuscarTodos();
         }
         /// <summary>
         /// Retorna um unico objeto com o id especificado
@@ -35,7 +35,7 @@ namespace Edux_API.Controllers
         [HttpGet("{id}")]
         public Dica Get(Guid id)
         {
-            return repo.SearchDicaForId(id);
+            return repo.BuscarPorId(id);
         }
 
         /// <summary>
@@ -45,7 +45,7 @@ namespace Edux_API.Controllers
         [HttpPost]
         public void Post(Dica dica)
         {
-            repo.AdicionarDica(dica);
+            repo.Criar(dica);
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace Edux_API.Controllers
         [HttpPut]
         public void Put(Dica dica)
         {
-            repo.AtualizarDica(dica);
+            repo.Atualizar(dica);
         }
 
         /// <summary>
@@ -65,7 +65,7 @@ namespace Edux_API.Controllers
         [HttpDelete]
         public void Delete(Guid id)
         {
-            repo.RemoverDica(id);
+            repo.Deletar(id);
         }
 
     }
