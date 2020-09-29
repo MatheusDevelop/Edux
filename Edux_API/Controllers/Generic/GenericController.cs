@@ -14,6 +14,7 @@ namespace Edux_API.Controllers
     public class GenericController<T> : ControllerBase where T: class
     {
 
+
         private readonly IBase<T> repo;
 
 
@@ -22,6 +23,10 @@ namespace Edux_API.Controllers
 
             repo = _repo;
         }
+
+
+       
+
         
         
         /// <summary>
