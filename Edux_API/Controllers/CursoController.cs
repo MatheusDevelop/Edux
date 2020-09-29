@@ -18,7 +18,10 @@ namespace Edux_API.Controllers
     //[Authorize(Roles = "Instituicao,Admin")]
     public class CursoController : GenericController<Curso>
     {
-       
+        public CursoController(IBase<Curso> repos):base(repos)
+        {
+           
+        }
     }
 
 }
