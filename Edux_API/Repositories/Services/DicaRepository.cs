@@ -13,6 +13,8 @@ namespace Edux_API.Repositories.Services
     public class DicaRepository : BaseGeneric<Dica>
     {
 
+
+
         public override void Criar(Dica Objeto)
         {
             var imageFile = Objeto.ImageForUpload;
@@ -20,10 +22,7 @@ namespace Edux_API.Repositories.Services
             Objeto.Imagem = convertFileToStringForDatabase(imageFile);
 
             _edux.Dica.Add(Objeto);
-
-
-
-
+            _edux.SaveChanges();
         }
 
 

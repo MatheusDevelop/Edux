@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+
 using Edux_API.Interfaces;
 using Edux_API.Repositories;
 using Microsoft.AspNetCore.Mvc;
@@ -14,8 +13,14 @@ namespace Edux_API.Controllers
     [ApiController]
     public class GenericController<T> : ControllerBase where T: class
     {
+<<<<<<< HEAD
+=======
+
+        private readonly IBase<T> repo;
+>>>>>>> develop
 
         BaseGeneric<T> repo = new BaseGeneric<T>();
+        
         
         /// <summary>
         /// Retorna uma lista mostrando todos os objetos da requisiçao
