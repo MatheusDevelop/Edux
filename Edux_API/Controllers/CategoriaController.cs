@@ -13,7 +13,7 @@ namespace Edux_API.Controllers
     [Route("api/[controller]")]
     [ApiController]
 
-    
+    [Authorize(Roles = "Professor,Instituicao,Admin")]
     public class CategoriaController : GenericController<Categoria>
     {
         public CategoriaController(IBase<Categoria> repos):base(repos)

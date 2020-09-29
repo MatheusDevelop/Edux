@@ -10,7 +10,7 @@ namespace Edux_API.Controllers
     [ApiController]
 
 
-   
+    [Authorize(Roles = "Professor,Instituicao,Admin")]
 
 
     public class AlunoTurmaController : GenericController<AlunoTurma>
