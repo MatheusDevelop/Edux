@@ -19,6 +19,7 @@ namespace Edux_API.Controllers
 
         public GenericController(IBase<T> _repo)
         {
+
             repo = _repo;
         }
         
