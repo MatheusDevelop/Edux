@@ -16,18 +16,12 @@ namespace Edux_API.Controllers
 
 
         private readonly IBase<T> repo;
-
-
         public GenericController(IBase<T> _repo)
         {
 
             repo = _repo;
         }
-
-
-       
-
-        
+              
         
         /// <summary>
         /// Retorna uma lista mostrando todos os objetos da requisiçao
