@@ -57,9 +57,12 @@ namespace Edux_API
                 };
             });
 
+            services.AddControllersWithViews()
+                .AddNewtonsoftJson(options =>
+                options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore
+            );
 
-            
-           //Swagger
+            //Swagger
             services.AddSwaggerGen(c=>
                 {
                     c.SwaggerDoc("v1", new OpenApiInfo { Title = "Edux API", Version = "v1" });
@@ -86,6 +89,8 @@ namespace Edux_API
             }
 
 
+            app.UseCors(option => option.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
+            
             app.UseHttpsRedirection();
 
 

@@ -55,6 +55,7 @@ namespace Edux_API.Controllers
         [HttpPut]
         public void Put(Dica dica)
         {
+            
             repo.Atualizar(dica);
         }
 

@@ -1,5 +1,6 @@
 ﻿using Edux_API.Contexts;
 using Edux_API.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,11 +11,13 @@ namespace Edux_API.Repositories
     public class BaseGeneric<T> : IBase<T> where T : class
     {
         public eduxContext _edux = new eduxContext();
-        public virtual void Atualizar(T objeto)
+        public virtual void Atualizar(T obj)
         {
-
-            _edux.Set<T>().Update(objeto);
-            _edux.SaveChanges();
+           /* var objeto = BuscarPorId(id);
+            objeto
+            _edux.Entry(objeto).State = EntityState.Modified;
+            
+            _edux.SaveChanges();*/
         }
 
         public virtual T BuscarPorId(Guid id)
@@ -24,7 +27,7 @@ namespace Edux_API.Repositories
                
         public virtual List<T> BuscarTodos()
         {
-            return _edux.Set<T>().ToList();
+            return _edux.Set<T>().AsNoTracking().ToList();
         }
 
         public virtual void Criar(T Objeto)

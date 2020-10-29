@@ -13,20 +13,12 @@ namespace Edux_API.Controllers
     [ApiController]
     public class GenericController<T> : ControllerBase where T: class
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 
-        private readonly IBase<T> repo;
->>>>>>> develop
-=======
 
 
         private readonly IBase<T> repo;
         public GenericController(IBase<T> _repo)
-        {
->>>>>>> develop
-
+        { 
             repo = _repo;
         }
               
@@ -36,7 +28,7 @@ namespace Edux_API.Controllers
         /// </summary>
         /// <returns></returns>
         [HttpGet]        
-        public List<T> Get()
+        public virtual List<T> Get()
         {
             return repo.BuscarTodos();
         }
@@ -67,7 +59,7 @@ namespace Edux_API.Controllers
         /// </summary>
         /// <param name="obj">Objeto</param>
 
-        [HttpPut("{id}")]
+        [HttpPut]
         public void Put(T obj)
         {
             repo.Atualizar(obj);
