@@ -12,7 +12,6 @@ namespace Edux_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    [Authorize(Roles = "Professor,Instituicao,Admin")]
     public class ObjetivoController : GenericController<Objetivo>
     {
         public ObjetivoController(IBase<Objetivo> repos):base(repos)

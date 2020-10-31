@@ -40,6 +40,10 @@ namespace Edux_API.Utils
             {
                 return false;
             }
+            user.DataCadastro = DateTime.Now;
+            user.DataUltimoAcesso = DateTime.Now;
+            user.IdPerfil = new Guid("21DCCECE-58EA-441A-AC21-2E457CD21781");           
+
             contexto.Usuario.Add(user);
             contexto.SaveChanges();
 
